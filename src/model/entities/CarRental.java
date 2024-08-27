@@ -8,7 +8,7 @@ public class CarRental {
 	private LocalDateTime finish;
 	
 	private Vehicle vehicle;					// Apontamento
-	private Invoice invloice;					// Apontamento 
+	private Invoice invoice;					// Apontamento 
 	
 	public CarRental() {
 	}
@@ -43,11 +43,11 @@ public class CarRental {
 		this.vehicle = vehicle;
 	}
 
-	public Invoice getInvloice() {
-		return invloice;
+	public Invoice getInvoice() {
+		return invoice;
 	}
 
-	public void setInvloice(Invoice invloice) {
-		this.invloice = invloice;
+	public void setInvoice(Invoice invoice) {
+		this.invoice = invoice;
 	}
 }
