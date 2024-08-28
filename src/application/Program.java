@@ -27,7 +27,6 @@ public class Program {
 		System.out.print("Return (dd/mm/yyyy hh:ss): ");
 		LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), fmt);
 		
-		
 		CarRental cr = new CarRental(start, finish, new Vehicle(carModel));
 		
 		System.out.print("Enter com o preço por hora: ");
@@ -35,7 +34,7 @@ public class Program {
 		System.out.print("Entre com o preço por hora: ");
 		double pricePerDay = sc.nextDouble();
 		
-		RentalService rentalService = new RentalService (pricePerHour, pricePerDay, new BrazilTaxService());
+		RentalService rentalService = new RentalService (pricePerHour, pricePerDay, new BrazilTaxService());				// BrazilTaxService -> upcasting de TaxService
 		
 		rentalService.processInvolice(cr);
 		

@@ -10,16 +10,15 @@ public class RentalService {
 	private Double pricePerHour;
 	private Double pricePerDay;
 	
-	private BrazilTaxService taxService;
+	private TaxService taxService;
 
-	public RentalService(Double pricePerHour, Double pricePerDay, BrazilTaxService taxService) {
+	public RentalService(Double pricePerHour, Double pricePerDay, TaxService taxService) {
 		this.pricePerHour = pricePerHour;
 		this.pricePerDay = pricePerDay;
 		this.taxService = taxService;
 	}
 	
 	public void processInvolice(CarRental carRental) {
-		
 		
 		double minutes = Duration.between(carRental.getStart(), carRental.getFinish()).toMinutes();							// Duration.between -> Calcula a diferenca entre dois períodos
 		double hours = minutes / 60.0;
